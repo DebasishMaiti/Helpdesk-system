@@ -14,7 +14,7 @@ function RegisterPage() {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:8000/api/auth/register', form);
+            await axios.post('https://helpdesk-system-5nuy.vercel.app/api/auth/register', form);
             alert('Registered successfully! Please login.');
             navigate('/login');
         } catch (err) {

@@ -14,7 +14,7 @@ function TicketDetail() {
 
     const fetchTicket = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/ticket/${id}`, {
+            const res = await axios.get(`https://helpdesk-system-5nuy.vercel.app/api/ticket/${id}`, {
                 headers: {
                     'Authorization': token,
                 }
@@ -39,7 +39,7 @@ function TicketDetail() {
         });
 
         try {
-            await axios.post(`http://localhost:8000/api/ticket/${id}/notes`, formData, {
+            await axios.post(`https://helpdesk-system-5nuy.vercel.app/api/ticket/${id}/notes`, formData, {
                 headers: {
                     'Authorization': token,
                     'Content-Type': 'multipart/form-data',
@@ -58,7 +58,7 @@ function TicketDetail() {
     const deleteNote = async (noteId) => {
         if (!window.confirm('Are you sure you want to delete this note?')) return;
         try {
-            await axios.delete(`http://localhost:8000/api/notes/${noteId}`, {
+            await axios.delete(`https://helpdesk-system-5nuy.vercel.app/api/notes/${noteId}`, {
                 headers: { Authorization: token }
             });
             alert('Note deleted');
@@ -97,16 +97,16 @@ function TicketDetail() {
                                         {isImage(f) ? (
                                             <div>
                                                 <img
-                                                    src={`http://localhost:8000/Uploads/${f}`}
+                                                    src={`https://helpdesk-system-5nuy.vercel.app/Uploads/${f}`}
                                                     alt={f}
                                                     className="note-img"
                                                 />
-                                                <a href={`http://localhost:8000/Uploads/${f}`} target="_blank" rel="noreferrer">
+                                                <a href={`https://helpdesk-system-5nuy.vercel.app/Uploads/${f}`} target="_blank" rel="noreferrer">
                                                     View Full Image
                                                 </a>
                                             </div>
                                         ) : (
-                                            <a href={`http://localhost:8000/Uploads/${f}`} target="_blank" rel="noreferrer">
+                                            <a href={`https://helpdesk-system-5nuy.vercel.app/Uploads/${f}`} target="_blank" rel="noreferrer">
                                                 {f.split('-').slice(1).join('-')}
                                             </a>
                                         )}

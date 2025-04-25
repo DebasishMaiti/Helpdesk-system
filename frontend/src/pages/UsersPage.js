@@ -8,7 +8,7 @@ function UsersPage() {
     const token = localStorage.getItem('token');
 
     const fetchUsers = () => {
-        axios.get('http://localhost:8000/api/user/users', {
+        axios.get('https://helpdesk-system-5nuy.vercel.app/api/user/users', {
             headers: {
                 'Authorization': token
             }
@@ -20,7 +20,7 @@ function UsersPage() {
     }, []);
 
     const handleRoleChange = (id, role) => {
-        axios.put(`http://localhost:8000/api/user/users/${id}/role`, { role }, {
+        axios.put(`https://helpdesk-system-5nuy.vercel.app/api/user/users/${id}/role`, { role }, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': token
@@ -30,7 +30,7 @@ function UsersPage() {
 
     const handleAddUser = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/user/adduser', form, {
+        axios.post('https://helpdesk-system-5nuy.vercel.app/api/user/adduser', form, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': token
