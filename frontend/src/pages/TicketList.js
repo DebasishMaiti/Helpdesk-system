@@ -59,7 +59,7 @@ function TicketList() {
                         <th>Status</th>
                         <th>Customer</th>
                         <th>Last Updated</th>
-                        <th>Notes</th>
+                        <th>Add Notes</th>
                     </tr>
                 </thead>
                 <tbody>
