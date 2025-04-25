@@ -11,7 +11,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const res = await axios.get('https://helpdesk-system-5nuy.vercel.app/api/ticket', {
+                const res = await axios.get('https://helpdesk-system-cety.vercel.app/api/ticket', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': token

@@ -15,7 +15,7 @@ function TicketList() {
     }, []);
 
     const fetchTickets = () => {
-        axios.get('https://helpdesk-system-5nuy.vercel.app/api/ticket', {
+        axios.get('https://helpdesk-system-cety.vercel.app/api/ticket', {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': token
@@ -26,7 +26,7 @@ function TicketList() {
     };
 
     const handleStatusChange = (ticketId, newStatus) => {
-        axios.put(`https://helpdesk-system-5nuy.vercel.app/api/ticket/${ticketId}/status`,
+        axios.put(`https://helpdesk-system-cety.vercel.app/api/ticket/${ticketId}/status`,
             { status: newStatus },
             {
                 headers: {

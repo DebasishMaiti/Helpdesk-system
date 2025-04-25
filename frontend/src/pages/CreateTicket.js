@@ -11,7 +11,7 @@ function CreateTicket() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://helpdesk-system-5nuy.vercel.app/api/ticket', { title }, {
+            await axios.post('https://helpdesk-system-cety.vercel.app/api/ticket', { title }, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': token
