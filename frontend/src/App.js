@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
@@ -9,14 +9,16 @@ import TicketDetail from './pages/TicketDetails';
 import UsersPage from './pages/UsersPage';
 import Layout from './Components/Layout';
 import CreateTicket from './pages/CreateTicket';
+import Home from './pages/Home';
 
 
 function App() {
   const user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
+        <Route path='/' element={<Home />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path='/register' element={<RegisterPage />} />
         {user ? (
@@ -36,7 +38,7 @@ function App() {
           <Route path="*" element={<Navigate to="/login" />} />
         )}
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
