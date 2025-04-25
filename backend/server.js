@@ -27,7 +27,7 @@ server.use(cors({
 server.use(express.json());
 server.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-mongoose.connect(process.env.mongodbConnection)
+mongoose.connect('mongodb+srv://maitidebasish2001:MYWOzpHZ0tlulz5X@cluster0.dnox1rz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('connection Established'))
     .catch((err) => console.log(err))
 server.get('/', (req, res) => {
