@@ -1,0 +1,46 @@
+/* CreateTicket.css */
+.create-ticket-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.create-ticket-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.create-ticket-container form label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.create-ticket-container form input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.create-ticket-container form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create-ticket-container form button:hover {
+  background-color: #218838;
+}

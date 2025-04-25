@@ -1,0 +1,46 @@
+/* Dashboard.css */
+.dashboard-container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+.dashboard-container h3 {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.stats-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  min-width: 200px;
+}
+
+.stat-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.stat-card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+}
