@@ -7,7 +7,10 @@ const AllRoutes = require('./Routes/index');
 const port = process.env.PORT || 8000;
 const server = express();
 
-server.use(cors());
+server.use(cors({
+    origin: "*", // or specify your frontend URL like "http://localhost:3000"
+    credentials: true
+}));
 
 server.use(express.json());
 server.use('/uploads', express.static(path.join(__dirname, 'uploads')));
