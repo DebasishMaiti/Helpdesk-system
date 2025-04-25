@@ -42,7 +42,7 @@ function LoginPage() {
             </form>
             <div className="login-footer">
                 <p>Don't have an account?</p>
-                <button onClick={() => navigate('/')}>Register</button>
+                <button onClick={() => navigate('/register')}>Register</button>
             </div>
         </div>
     );

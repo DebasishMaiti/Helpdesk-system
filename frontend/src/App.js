@@ -18,7 +18,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route index element={<RegisterPage />} />
+        <Route path='/register' element={<RegisterPage />} />
         {user ? (
           <Route element={<Layout />}>
             <Route path="/dashboard" element={<Dashboard />} />
