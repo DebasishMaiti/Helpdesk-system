@@ -7,9 +7,16 @@ const AllRoutes = require('./Routes/index');
 const port = process.env.PORT || 8000;
 const server = express();
 
+const allowedOrigins = [
+    'http://localhost:3000',
+    'https://helpdesk-system-pi.vercel.app'
+];
 
+app.use(cors({
+    origin: allowedOrigins,
+    credentials: true
+}));
 
-server.use(cors());
 server.use(express.json());
 server.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
