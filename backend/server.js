@@ -12,7 +12,7 @@ const allowedOrigins = [
     'https://helpdesk-system-pi.vercel.app'
 ];
 
-app.use(cors({
+server.use(cors({
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
